@@ -1,18 +1,20 @@
 {
-    "name": "Adaptive N-Back",
-    "exp_id": "adaptive-n-back",
-    "url": "https://www.github.com/expfactory-experiments/adaptive-n-back",
-    "description": "The adaptive n-back is a test of cognitive control.",
-    "instructions": "Press buttons to respond to the stimulus on the screen.",
-    "cognitive_atlas_task_id": "trm_56674133b666c",
-    "template":"jspsych",
+    "cognitive_atlas_task_id": "trm_4ebd477ab5a11",
+    "instructions":"In this task, you will be asked to remember the object that was presented 'N' items back in a sequence.",
+    "description":"Short version of the N-back task, using visual objects (animals)",
+    "url":"https://www.github.com/expfactory-experiments/nback-10min-animals",
     "contributors": [
-                     "Ian Eisenberg",
-                     "Zeynep Enkavi",
-                     "Patrick Bissett",
-                     "Vanessa Sochat",
-                     "Russell Poldrack"], 
-    "time":20,
-    "reference": ["http://www.sciencedirect.com/science/article/pii/S1053811905001424",
-                  "reference for adaptive procedure: http://www.pnas.org/content/105/19/6829.full"]
+        "Tyler Burleigh",
+        "Vanessa Sochat",
+        "Ian Eisenberg",
+        "Zeynep Enkavi",
+        "Patrick Bissett",
+        "Russell Poldrack"
+    ],
+    "exp_id": "nback-10min-animals",
+    "name": "N-back 10-minute (animal objects)",
+    "reference": ["Working Memory for Complex Figures: An fMRI Comparison of Letter and Fractal n-Back Tasks",
+                  "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4332798"],
+    "template": "jspsych",
+    "time": 10
 }
