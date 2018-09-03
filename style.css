@@ -1,0 +1,66 @@
+.center-text {
+	font-size: 100px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.display_stage {
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='250px' width='250px'><text x='0' y='0' fill='white' font-size='20'>+</text></svg>");	
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fb_box {
+  width:250px;
+  height:250px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-right:-50%;
+  margin-top:-20px;
+  transform: translate(-50%,-50%);
+}
+
+.svg {
+  width:250px;
+  height:250px;
+  background: black;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-50%,-50%);
+}
+
+.img {
+  top: 25px;
+  position:relative;
+}
+
+
+/*
+	Code for image cycle in instructions
+*/
+#slides {
+    position: relative;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+	text-align:center;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}

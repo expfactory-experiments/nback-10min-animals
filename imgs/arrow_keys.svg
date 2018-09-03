@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 680 552" style="enable-background:new 0 0 680 552;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:6;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;}
+	.st2{clip-path:url(#SVGID_2_);}
+	.st3{clip-path:url(#SVGID_4_);fill:url(#SVGID_5_);}
+	.st4{clip-path:url(#SVGID_7_);}
+	.st5{clip-path:url(#SVGID_9_);fill:url(#SVGID_10_);}
+	.st6{clip-path:url(#SVGID_12_);}
+	.st7{clip-path:url(#SVGID_14_);fill:url(#SVGID_15_);}
+	.st8{clip-path:url(#SVGID_17_);}
+	.st9{clip-path:url(#SVGID_19_);fill:url(#SVGID_20_);}
+	.st10{clip-path:url(#SVGID_22_);}
+	.st11{clip-path:url(#SVGID_24_);fill:url(#SVGID_25_);}
+	.st12{clip-path:url(#SVGID_27_);}
+	.st13{clip-path:url(#SVGID_29_);fill:url(#SVGID_30_);}
+	.st14{clip-path:url(#SVGID_32_);}
+	.st15{clip-path:url(#SVGID_34_);fill:url(#SVGID_35_);}
+	.st16{clip-path:url(#SVGID_37_);}
+	.st17{clip-path:url(#SVGID_39_);fill:url(#SVGID_40_);}
+	.st18{clip-path:url(#SVGID_42_);}
+	.st19{clip-path:url(#SVGID_44_);}
+	.st20{clip-path:url(#SVGID_46_);fill:url(#SVGID_47_);}
+	.st21{clip-path:url(#SVGID_49_);}
+	.st22{clip-path:url(#SVGID_51_);fill:url(#SVGID_52_);}
+	.st23{font-family:'Arial';}
+	.st24{font-size:51px;}
+	.st25{fill:#ED1C24;}
+	.st26{font-family:'Arial'; font-weight:bold}
+	.st27{font-size:36px;}
+	.st28{fill:#6BBD45;}
+</style>
+<font horiz-adv-x="2048">
+<!-- Arial is a trademark of The Monotype Corporation. -->
+<!-- Copyright: Copyright 2018 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="Arial" units-per-em="2048" underline-position="-217" underline-thickness="150"/>
+<missing-glyph horiz-adv-x="1536" d="M256,0l0,1280l1024,0l0,-1280M288,32l960,0l0,1216l-960,0z"/>
+<glyph unicode=" " horiz-adv-x="569"/>
+<glyph unicode="-" horiz-adv-x="682" d="M65,440l0,181l553,0l0,-181z"/>
+<glyph unicode="a" horiz-adv-x="1139" d="M828,131C761,74 697,34 636,11C574,-12 508,-24 437,-24C320,-24 231,5 168,62C105,119 74,191 74,280C74,332 86,380 110,423C133,466 164,500 203,526C241,552 284,572 332,585C367,594 421,603 492,612C637,629 744,650 813,674C814,699 814,714 814,721C814,794 797,846 763,876C717,917 649,937 558,937C473,937 411,922 371,893C330,863 300,810 281,735l-176,24C121,834 147,895 184,942C221,988 274,1024 343,1049C412,1074 493,1086 584,1086C675,1086 748,1075 805,1054C862,1033 903,1006 930,974C957,941 975,900 986,851C992,820 995,765 995,685l0,-240C995,278 999,172 1007,128C1014,83 1029,41 1052,0l-188,0C845,37 833,81 828,131M813,533C748,506 650,484 519,465C445,454 393,442 362,429C331,416 308,396 291,371C274,345 266,316 266,285C266,237 284,197 321,165C357,133 410,117 480,117C549,117 611,132 665,163C719,193 759,234 784,287C803,328 813,388 813,467z"/>
+<glyph unicode="c" horiz-adv-x="1024" d="M828,389l177,-23C986,244 936,149 857,80C777,11 679,-24 563,-24C418,-24 301,24 213,119C124,214 80,350 80,527C80,642 99,742 137,828C175,914 233,979 311,1022C388,1065 473,1086 564,1086C679,1086 774,1057 847,999C920,940 967,857 988,750l-175,-27C796,794 767,848 725,884C682,920 631,938 571,938C480,938 407,906 350,841C293,776 265,673 265,532C265,389 292,286 347,221C402,156 473,124 561,124C632,124 691,146 738,189C785,232 815,299 828,389z"/>
+<glyph unicode="h" horiz-adv-x="1139" d="M135,0l0,1466l180,0l0,-526C399,1037 505,1086 633,1086C712,1086 780,1071 838,1040C896,1009 938,966 963,911C988,856 1000,777 1000,673l0,-673l-180,0l0,673C820,763 801,829 762,870C723,911 667,931 596,931C543,931 493,917 446,890C399,862 365,824 345,777C325,730 315,664 315,581l0,-581z"/>
+<glyph unicode="i" horiz-adv-x="455" d="M136,1259l0,207l180,0l0,-207M136,0l0,1062l180,0l0,-1062z"/>
+<glyph unicode="m" horiz-adv-x="1706" d="M135,0l0,1062l161,0l0,-149C329,965 374,1007 429,1039C484,1070 547,1086 618,1086C697,1086 761,1070 812,1037C862,1004 897,959 918,900C1002,1024 1111,1086 1246,1086C1351,1086 1432,1057 1489,999C1546,940 1574,850 1574,729l0,-729l-179,0l0,669C1395,741 1389,793 1378,825C1366,856 1345,882 1314,901C1283,920 1247,930 1206,930C1131,930 1069,905 1020,856C971,806 946,726 946,617l0,-617l-180,0l0,690C766,770 751,830 722,870C693,910 645,930 578,930C527,930 481,917 438,890C395,863 363,824 344,773C325,722 315,648 315,551l0,-551z"/>
+<glyph unicode="s" horiz-adv-x="1024" d="M63,317l178,28C251,274 279,219 325,181C370,143 434,124 516,124C599,124 660,141 700,175C740,208 760,248 760,293C760,334 742,366 707,389C682,405 621,425 523,450C391,483 300,512 249,537C198,561 159,595 133,638C106,681 93,728 93,780C93,827 104,871 126,912C147,952 177,985 214,1012C242,1033 280,1050 329,1065C377,1079 429,1086 484,1086C567,1086 641,1074 704,1050C767,1026 813,994 843,953C873,912 894,857 905,788l-176,-24C721,819 698,861 660,892C621,923 567,938 497,938C414,938 355,924 320,897C285,870 267,838 267,801C267,778 274,757 289,738C304,719 327,703 358,690C376,683 429,668 517,644C644,610 733,582 784,561C834,539 873,507 902,466C931,425 945,373 945,312C945,252 928,196 893,143C858,90 807,49 741,20C675,-9 600,-24 517,-24C379,-24 274,5 202,62C129,119 83,204 63,317z"/>
+<glyph unicode="t" horiz-adv-x="569" d="M528,161l26,-159C503,-9 458,-14 418,-14C353,-14 302,-4 266,17C230,38 205,65 190,99C175,132 168,203 168,311l0,611l-132,0l0,140l132,0l0,263l179,108l0,-371l181,0l0,-140l-181,0l0,-621C347,250 350,217 357,202C363,187 373,176 388,167C402,158 422,154 449,154C469,154 495,156 528,161z"/>
+</font>
+
+	<font horiz-adv-x="2048">
+<!-- Arial is a trademark of The Monotype Corporation. -->
+<!-- Copyright: Copyright 2018 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="Arial" units-per-em="2048" underline-position="-217" underline-thickness="215"/>
+<missing-glyph horiz-adv-x="1536" d="M256,0l0,1280l1024,0l0,-1280M288,32l960,0l0,1216l-960,0z"/>
+<glyph unicode="D" horiz-adv-x="1479" d="M148,1466l541,0C811,1466 904,1457 968,1438C1054,1413 1128,1368 1189,1303C1250,1238 1297,1159 1329,1066C1361,972 1377,856 1377,719C1377,598 1362,494 1332,407C1295,300 1243,214 1175,148C1124,98 1054,59 967,31C902,10 814,0 705,0l-557,0M444,1218l0,-971l221,0C748,247 807,252 844,261C892,273 932,293 964,322C995,351 1021,398 1041,464C1061,529 1071,619 1071,732C1071,845 1061,932 1041,993C1021,1054 993,1101 957,1135C921,1169 875,1192 820,1204C779,1213 698,1218 577,1218z"/>
+<glyph unicode="G" horiz-adv-x="1593" d="M831,539l0,247l638,0l0,-584C1407,142 1317,89 1200,44C1082,-2 963,-25 842,-25C689,-25 555,7 441,72C327,136 241,228 184,348C127,467 98,597 98,738C98,891 130,1026 194,1145C258,1264 352,1355 475,1418C569,1467 686,1491 826,1491C1008,1491 1150,1453 1253,1377C1355,1300 1421,1195 1450,1060l-294,-55C1135,1077 1097,1134 1040,1176C983,1217 911,1238 826,1238C697,1238 594,1197 518,1115C441,1033 403,911 403,750C403,576 442,446 519,359C596,272 698,228 823,228C885,228 947,240 1010,265C1072,289 1125,318 1170,353l0,186z"/>
+<glyph unicode="H" horiz-adv-x="1479" d="M150,0l0,1466l296,0l0,-577l580,0l0,577l296,0l0,-1466l-296,0l0,641l-580,0l0,-641z"/>
+<glyph unicode="I" horiz-adv-x="569" d="M140,0l0,1466l296,0l0,-1466z"/>
+<glyph unicode="N" horiz-adv-x="1479" d="M152,0l0,1466l288,0l600,-979l0,979l275,0l0,-1466l-297,0l-591,956l0,-956z"/>
+<glyph unicode="O" horiz-adv-x="1593" d="M89,724C89,873 111,999 156,1100C189,1175 235,1242 293,1301C350,1360 413,1404 482,1433C573,1472 679,1491 798,1491C1014,1491 1187,1424 1317,1290C1446,1156 1511,970 1511,731C1511,494 1447,309 1318,176C1189,42 1017,-25 802,-25C584,-25 411,42 282,175C153,308 89,491 89,724M394,734C394,568 432,442 509,357C586,271 683,228 801,228C919,228 1016,271 1092,356C1167,441 1205,568 1205,738C1205,906 1168,1031 1095,1114C1021,1197 923,1238 801,1238C679,1238 581,1196 506,1113C431,1029 394,903 394,734z"/>
+<glyph unicode="R" horiz-adv-x="1479" d="M150,0l0,1466l623,0C930,1466 1044,1453 1115,1427C1186,1400 1242,1353 1285,1286C1328,1219 1349,1142 1349,1055C1349,945 1317,854 1252,783C1187,711 1091,666 962,647C1026,610 1079,569 1121,524C1162,479 1218,400 1289,286l179,-286l-354,0l-214,319C824,433 772,505 744,535C716,564 686,585 655,596C624,607 574,612 506,612l-60,0l0,-612M446,846l219,0C807,846 896,852 931,864C966,876 994,897 1014,926C1034,955 1044,992 1044,1036C1044,1085 1031,1125 1005,1156C978,1186 941,1205 893,1213C869,1216 797,1218 677,1218l-231,0z"/>
+<glyph unicode="T" horiz-adv-x="1251" d="M479,0l0,1218l-435,0l0,248l1165,0l0,-248l-434,0l0,-1218z"/>
+<glyph unicode="W" horiz-adv-x="1933" d="M357,0l-350,1466l303,0l221,-1007l268,1007l352,0l257,-1024l225,1024l298,0l-356,-1466l-314,0l-292,1096l-291,-1096z"/>
+</font>
+
+	<rect y="-28" width="680" height="594"/>
+<g>
+	<g>
+		<line class="st0" x1="340" y1="261.3" x2="210.1" y2="409.4"/>
+		<g>
+			<polygon class="st1" points="196.1,425.4 206.7,394.9 211.2,408.2 225,411 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M290,16.6c-6.6,0-12,5.4-12,12l0,0v94.3c0,6.6,5.4,12,12,12l0,0h95.4c6.6,0,12-5.4,12-12l0,0V28.6
+			c0-6.6-5.4-12-12-12l0,0H290z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st2">
+		<g>
+			<defs>
+				<rect id="SVGID_3_" x="278" y="16.7" width="543.4" height="543.4"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_5_" cx="32" cy="507" r="1" gradientTransform="matrix(181.1431 0 0 -181.1431 -5403.3857 91970.0781)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="278" y="16.7" class="st3" width="543.4" height="543.4"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_6_" d="M299.4,22.5c-3.3,0-6,2.7-6,6l0,0v87.4c0,3.3,2.7,6,6,6l0,0H376c3.3,0,6-2.7,6-6l0,0V28.5c0-3.3-2.7-6-6-6
+			l0,0H299.4z"/>
+	</defs>
+	<clipPath id="SVGID_7_">
+		<use xlink:href="#SVGID_6_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st4">
+		<g>
+			<defs>
+				<rect id="SVGID_8_" x="293.4" y="22.5" width="409.7" height="409.7"/>
+			</defs>
+			<clipPath id="SVGID_9_">
+				<use xlink:href="#SVGID_8_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_10_" cx="32" cy="507" r="1" gradientTransform="matrix(136.5783 0 0 -136.5783 -4073.9377 69269.9844)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="293.4" y="22.5" class="st5" width="409.7" height="409.7"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_11_" d="M290,143.1c-6.6,0-12,5.4-12,12l0,0v94.3c0,6.6,5.4,12,12,12l0,0h95.4c6.6,0,12-5.4,12-12l0,0v-94.3
+			c0-6.6-5.4-12-12-12l0,0H290z"/>
+	</defs>
+	<clipPath id="SVGID_12_">
+		<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st6">
+		<g>
+			<defs>
+				<rect id="SVGID_13_" x="278" y="143.2" width="543.4" height="543.4"/>
+			</defs>
+			<clipPath id="SVGID_14_">
+				<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_15_" cx="32" cy="507" r="1" gradientTransform="matrix(181.1431 0 0 -181.1431 -5403.3857 92096.5781)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="278" y="143.2" class="st7" width="543.4" height="543.4"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_16_" d="M299.4,148.9c-3.3,0-6,2.7-6,6l0,0v87.4c0,3.3,2.7,6,6,6l0,0H376c3.3,0,6-2.7,6-6l0,0v-87.4
+			c0-3.3-2.7-6-6-6l0,0H299.4z"/>
+	</defs>
+	<clipPath id="SVGID_17_">
+		<use xlink:href="#SVGID_16_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st8">
+		<g>
+			<defs>
+				<rect id="SVGID_18_" x="293.4" y="149" width="409.7" height="409.7"/>
+			</defs>
+			<clipPath id="SVGID_19_">
+				<use xlink:href="#SVGID_18_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_20_" cx="32" cy="507" r="1" gradientTransform="matrix(136.5779 0 0 -136.5779 -4073.9441 69396.2188)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="293.4" y="149" class="st9" width="409.7" height="409.7"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_21_" d="M418.6,143.1c-6.6,0-12,5.4-12,12l0,0v94.3c0,6.6,5.4,12,12,12l0,0H514c6.6,0,12-5.4,12-12l0,0v-94.3
+			c0-6.6-5.4-12-12-12l0,0H418.6z"/>
+	</defs>
+	<clipPath id="SVGID_22_">
+		<use xlink:href="#SVGID_21_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st10">
+		<g>
+			<defs>
+				<rect id="SVGID_23_" x="406.5" y="143.2" width="543.4" height="543.4"/>
+			</defs>
+			<clipPath id="SVGID_24_">
+				<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_25_" cx="32" cy="507" r="1" gradientTransform="matrix(181.1431 0 0 -181.1431 -5274.8857 92096.5781)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="406.5" y="143.2" class="st11" width="543.4" height="543.4"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_26_" d="M428,148.9c-3.3,0-6,2.7-6,6l0,0v87.4c0,3.3,2.7,6,6,6l0,0h76.6c3.3,0,6-2.7,6-6l0,0v-87.4
+			c0-3.3-2.7-6-6-6l0,0H428z"/>
+	</defs>
+	<clipPath id="SVGID_27_">
+		<use xlink:href="#SVGID_26_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st12">
+		<g>
+			<defs>
+				<rect id="SVGID_28_" x="422.1" y="148.9" width="409.7" height="409.7"/>
+			</defs>
+			<clipPath id="SVGID_29_">
+				<use xlink:href="#SVGID_28_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_30_" cx="32" cy="507" r="1" gradientTransform="matrix(136.5776 0 0 -136.5776 -3945.2996 69396.0313)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="422.1" y="148.9" class="st13" width="409.7" height="409.7"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_31_" d="M162,143.1c-6.6,0-12,5.4-12,12l0,0v94.3c0,6.6,5.4,12,12,12l0,0h95.4c6.6,0,12-5.4,12-12l0,0v-94.3
+			c0-6.6-5.4-12-12-12l0,0H162z"/>
+	</defs>
+	<clipPath id="SVGID_32_">
+		<use xlink:href="#SVGID_31_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st14">
+		<g>
+			<defs>
+				<rect id="SVGID_33_" x="150" y="143.2" width="543.4" height="543.4"/>
+			</defs>
+			<clipPath id="SVGID_34_">
+				<use xlink:href="#SVGID_33_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_35_" cx="32" cy="507" r="1" gradientTransform="matrix(181.1431 0 0 -181.1431 -5531.3862 92096.5781)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="150" y="143.2" class="st15" width="543.4" height="543.4"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_36_" d="M171.4,148.9c-3.3,0-6,2.7-6,6l0,0v87.4c0,3.3,2.7,6,6,6l0,0H248c3.3,0,6-2.7,6-6l0,0v-87.4
+			c0-3.3-2.7-6-6-6l0,0H171.4z"/>
+	</defs>
+	<clipPath id="SVGID_37_">
+		<use xlink:href="#SVGID_36_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st16">
+		<g>
+			<defs>
+				<rect id="SVGID_38_" x="165.4" y="149" width="409.7" height="409.7"/>
+			</defs>
+			<clipPath id="SVGID_39_">
+				<use xlink:href="#SVGID_38_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_40_" cx="32" cy="507" r="1" gradientTransform="matrix(136.5779 0 0 -136.5779 -4201.9438 69396.2188)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="165.4" y="149" class="st17" width="409.7" height="409.7"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_41_" x="32" y="-257" width="612" height="792"/>
+	</defs>
+	<clipPath id="SVGID_42_">
+		<use xlink:href="#SVGID_41_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st18" points="320.8,87.9 320.8,60.1 328.1,60.1 318.4,39.7 308.7,60.1 316.1,60.1 316.1,87.9 	"/>
+	<polygon class="st18" points="316.1,173.9 316.1,201.8 308.7,201.8 318.4,222.2 328.1,201.8 320.8,201.8 320.8,173.9 	"/>
+	<polygon class="st18" points="442.5,200.4 470.4,200.4 470.4,207.8 490.8,198.1 470.4,188.3 470.4,195.7 442.5,195.7 	"/>
+	<polygon class="st18" points="234,195.7 206.2,195.7 206.2,188.3 185.7,198.1 206.2,207.8 206.2,200.4 234,200.4 	"/>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_43_" d="M290.3,143.1c-6.6,0-12,5.4-12,12l0,0v94.3c0,6.6,5.4,12,12,12l0,0h95.4c6.6,0,12-5.4,12-12l0,0v-94.3
+			c0-6.6-5.4-12-12-12l0,0H290.3z"/>
+	</defs>
+	<clipPath id="SVGID_44_">
+		<use xlink:href="#SVGID_43_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st19">
+		<g>
+			<defs>
+				<rect id="SVGID_45_" x="-65" y="280" width="543.4" height="543.4"/>
+			</defs>
+			<clipPath id="SVGID_46_">
+				<use xlink:href="#SVGID_45_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_47_" cx="32" cy="507" r="1" gradientTransform="matrix(181.1431 0 0 -181.1431 -5746.3931 92233.4375)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="-65" y="280" class="st20" width="543.4" height="543.4"/>
+		</g>
+	</g>
+	<use xlink:href="#SVGID_43_"  style="overflow:visible;fill:none;stroke:#ED1C24;stroke-width:6;stroke-miterlimit:10;"/>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_48_" d="M418.3,143.1c-6.6,0-12,5.4-12,12l0,0v94.3c0,6.6,5.4,12,12,12l0,0h95.4c6.6,0,12-5.4,12-12l0,0v-94.3
+			c0-6.6-5.4-12-12-12l0,0H418.3z"/>
+	</defs>
+	<clipPath id="SVGID_49_">
+		<use xlink:href="#SVGID_48_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st21">
+		<g>
+			<defs>
+				<rect id="SVGID_50_" x="382" y="275" width="543.4" height="543.4"/>
+			</defs>
+			<clipPath id="SVGID_51_">
+				<use xlink:href="#SVGID_50_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<radialGradient id="SVGID_52_" cx="32" cy="507" r="1" gradientTransform="matrix(181.1431 0 0 -181.1431 -5299.3936 92228.4375)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#8B8D90"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</radialGradient>
+			<rect x="382" y="275" class="st22" width="543.4" height="543.4"/>
+		</g>
+	</g>
+	<use xlink:href="#SVGID_48_"  style="overflow:visible;fill:none;stroke:#6BBD45;stroke-width:6;stroke-miterlimit:10;"/>
+</g>
+<text transform="matrix(1 0 0 1 78.4111 473)"><tspan x="0" y="0" class="st1 st23 st24">mis-match </tspan><tspan x="60.6" y="43.2" class="st25 st26 st27">DOWN</tspan></text>
+<g>
+	<g>
+		<line class="st0" x1="465.4" y1="261.3" x2="474.1" y2="401.7"/>
+		<g>
+			<polygon class="st1" points="475.4,422.9 461.4,393.8 474,400.1 485.7,392.3 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 412.9883 473)"><tspan x="0" y="0" class="st1 st23 st24">match</tspan><tspan x="13.4" y="43.2" class="st28 st26 st27">RIGHT</tspan></text>
+</svg>
