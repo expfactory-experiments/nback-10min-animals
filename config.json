@@ -1,0 +1,20 @@
+{
+    "cognitive_atlas_task_id": "trm_4ebd477ab5a11",
+    "instructions":"In this task, you will be asked to remember the object that was presented 'N' items back in a sequence.",
+    "description":"Short version of the N-back task, using visual objects (animals)",
+    "url":"https://www.github.com/expfactory-experiments/nback-10min-animals",
+    "contributors": [
+        "Tyler Burleigh",
+        "Vanessa Sochat",
+        "Ian Eisenberg",
+        "Zeynep Enkavi",
+        "Patrick Bissett",
+        "Russell Poldrack"
+    ],
+    "exp_id": "nback-10min-animals",
+    "name": "N-back 10-minute (animal objects)",
+    "reference": ["Working Memory for Complex Figures: An fMRI Comparison of Letter and Fractal n-Back Tasks",
+                  "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4332798"],
+    "template": "jspsych",
+    "time": 10
+}
