@@ -4,12 +4,7 @@
     "description":"Short version of the N-back task, using visual objects (animals)",
     "url":"https://www.github.com/expfactory-experiments/nback-10min-animals",
     "contributors": [
-        "Tyler Burleigh",
-        "Vanessa Sochat",
-        "Ian Eisenberg",
-        "Zeynep Enkavi",
-        "Patrick Bissett",
-        "Russell Poldrack"
+        "Tyler Burleigh"
     ],
     "exp_id": "nback-10min-animals",
     "name": "N-back 10-minute (animal objects)",
