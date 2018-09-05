@@ -84,7 +84,7 @@ This task also uses two attention probes to catch inattentive participants and h
 
 ### How much shorter is it?
 
-Brief Animals N-Back (nback-10min-animals) has 160 trials and is designed to take about 10 minutes to complete. For comparison, adaptive-n-back has about 450 trials (it varies somewhat) and based on the completion times from a recent study it takes 23 minutes on average to complete; n-back has 325 trials. Although I'm not aware of data to test its length, given the timings are similar, because it is about 72% the length as measured in trials, we can expect it to take about 16.5 minutes to complete.
+Brief Animals N-Back (nback-10min-animals) has 160 trials and is designed to take about 10 minutes to complete. For comparison, [adaptive-n-back](https://github.com/expfactory-experiments/adaptive-n-back) has about 450 trials (it varies somewhat) and based on the completion times from a recent study it takes 23 minutes on average to complete; [n-back](https://github.com/expfactory-experiments/n-back) has 325 trials. Although I'm not aware of data to test the length [n-back](https://github.com/expfactory-experiments/n-back), given the timings are similar, because it is about 72% the length as measured in trials, we can expect it to take about 16.5 minutes to complete. Thus, [nback-10min-animals](https://github.com/expfactory-experiments/nback-10min-animals) is 40% to 57% shorter (6.5 to 13 minutes shorter).
 
 
 # Experiment Factory
