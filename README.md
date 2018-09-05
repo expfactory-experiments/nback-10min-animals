@@ -9,13 +9,13 @@ This is a brief version of the N-back task. It is designed to take only 10 minut
 This experiment has 8 blocks. The first two blocks are 1-back, and exist to familiarize the participant with the task. The remaining blocks are "test" blocks, with 3 blocks of 2-back and 3 blocks of 3-back difficulty.
 
   - 1-back with response feedback (correct/incorrect)
-  - 1-back without response feedback
-  - 2-back
-  - 2-back
-  - 2-back
-  - 3-back
-  - 3-back
-  - 3-back
+  - 1-back (no feedback)
+  - 2-back (no feedback)
+  - 2-back (no feedback)
+  - 2-back (no feedback)
+  - 3-back (no feedback)
+  - 3-back (no feedback)
+  - 3-back (no feedback)
 
 Each block has 20 trials, with two replications of each stimulus per block. Each block has exactly 7 targets (and 13 non-targets). A target is an item in the sequence that matches the item N-back in the series.
 
