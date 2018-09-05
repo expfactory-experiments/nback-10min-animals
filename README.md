@@ -3,6 +3,7 @@
 ## What is this?
 
 This is a brief version of the N-back task. 
+
 It was designed to take only 10 minutes, and it uses animal objects as stimuli.
 
 ## Blocks
