@@ -17,7 +17,7 @@ This experiment has 8 blocks. The first two blocks are 1-back, and exist to fami
   - 3-back (no feedback)
   - 3-back (no feedback)
 
-Each block has 20 trials, with two replications of each stimulus per block. Each block has exactly 7 targets (and 13 non-targets). A target is an item in the sequence that matches the item N-back in the series.
+Each block has 20 (+ delay level) trials. Each block has exactly 7 targets (and 13 non-targets), where a target is an item in the sequence that matches the item N-back in the series (i.e., a "match").
 
 ## Stimuli
 
