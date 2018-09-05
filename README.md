@@ -54,6 +54,10 @@ The response deadline is adaptive. If participants miss (time-out on) 7 trials i
 
 The justification for an adaptive response deadline is to not place participants with slower motor functioning (e.g., older participants) at a disadvantage. Time-outs are both frustrating from a user standpoint, and not particularly meaningful from the standpoint of analysis. As scoring is not based on accuracy and not response speed, the response deadline should not substantially impact the interpretation of results.
 
+## Responses
+
+Participants respond by pressing a key if the item shown is a "match" to the item presented N-back, otherwise they press a different key to indicate a "mis-match".
+
 ## Scoring
 
 The task is scored by first identifying the Hits, Misses, Correct Rejections, and False Alarms in each of the 2-back and 3-back blocks. D-prime, a statistic that summarizes performance, is then calculated for each of these blocks. The average d-prime is taken from the 2-back and 3-back blocks for an overall task score. For more detail on scoring, see the included [R code](https://github.com/expfactory-experiments/nback-10min-animals/blob/master/expfactory.nback10minanimals/R/expfactory.nback10minanimals.R). For more on d-prime, see the [Wikipedia entry](https://en.wikipedia.org/wiki/Sensitivity_index).
