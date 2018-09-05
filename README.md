@@ -80,7 +80,7 @@ Experiment Factory has two other n-back tasks:
  
 There are two key differences. First, nback-10min-animals is only 10-minutes in length. Second, nback-10min-animals uses animal objects as stimuli instead of letters. The motivation to use animals instead of letters was to create a better user experience and minimize the influence of culture and English language fluency on performance.
 
-This task also used two attention probes to catch inattentive participants, and has a more user-friendly set of instructions.
+This task also uses two attention probes to catch inattentive participants and has a more user-friendly set of instructions.
 
 ### How much shorter is it?
 
