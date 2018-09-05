@@ -8,7 +8,7 @@ This is a brief version of the N-back task. It is designed to take only 10 minut
 
 This experiment has 8 blocks. The first two blocks are 1-back, and exist to familiarize the participant with the task. The remaining blocks are "test" blocks, with 3 blocks of 2-back and 3 blocks of 3-back difficulty.
 
-  - 1-back with response feedback (correct/incorrect)
+  - 1-back with response feedback (correct/incorrect/too slow)
   - 1-back (no feedback)
   - 2-back (no feedback)
   - 2-back (no feedback)
