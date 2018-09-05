@@ -52,7 +52,7 @@ Sources:
  - Response deadline: 2000ms
  - Inter-Stimulus Interval (ISI): 500ms
  
-The response deadline is adaptive. If participants miss (time-out on) 7 trials in a given block, then 500ms is added to the response deadline, up to a maximum of 3500ms. If participants miss fewer than 3 trials, then 500ms is subtracted from the response deadline, down to a minimum of 2000ms.
+The response deadline is adaptive. If a participant misses (times-out on) more than 7 trials in a given block, then 500ms is added to the response deadline, up to a maximum of 3500ms. If a participant misses fewer than 3 trials, then 500ms is subtracted from their response deadline, down to a minimum of 2000ms. Otherwise, the response deadline remains the same.
 
 The justification for an adaptive response deadline is to not place participants with slower motor functioning (e.g., older participants) at a disadvantage. Time-outs are both frustrating from a user standpoint, and not particularly meaningful from the standpoint of analysis. As scoring is not based on accuracy and not response speed, the response deadline should not substantially impact the interpretation of results.
 
