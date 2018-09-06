@@ -1,0 +1,388 @@
+# This is a CircleCI configuration that will help you to test and deploy
+# your experiment! You need to define the following variables:
+
+# EXPFACTORY_PACKAGE: is defined in the "defaults" section of the recipe 
+#     below, this should be the R package that is used to test your submission
+#     and a folder in the repository.
+# # CONTAINER_NAME: is the experiment container that will be built and 
+#     deployed to docker Hub. You can do it here OR in your CircleCI secrets
+# 
+# The following variables must be defined on CircleCI as they are secrets
+# DOCKER_USER
+# DOCKER_PASS both speak for themselves, and should go in CircleCI settings
+#    these variables will make it possible to deploy the container to Docker
+#    Hub
+# GITHUB_USER 
+# GITHUB_EMAIL should coincide with the Github User that has granted the ssh
+#    key for use. You can find this under "Checkout SSH Keys" in settings.
+
+
+################################################################################
+# Functions
+################################################################################
+
+# Defaults
+defaults: &defaults
+  docker:
+    - image: docker:18.01.0-ce-git
+  working_directory: /tmp/src
+  environment:
+    - EXPFACTORY_PACKAGE: expfactory.nback10minanimals
+
+# Installation
+install: &install
+    name: Install parallel gzip, gettext, python3, and jq
+    command: apk add --no-cache pigz python3 gettext jq
+
+# Environment
+sourceenv: &sourceenv
+    name: Source environment variables from the BASH_ENV
+    command: source $BASH_ENV 
+
+containerdiff: &containerdiff
+    name: Download and add container-diff to path
+    command: |
+        curl -LO https://storage.googleapis.com/container-diff/latest/container-diff-linux-amd64
+        chmod +x container-diff-linux-amd64
+        mkdir -p /tmp/bin
+        mv container-diff-linux-amd64 /tmp/bin
+        export PATH="/tmp/bin:${PATH}"
+        # export to bash environment
+        echo "export PATH=${PATH}" >> ${BASH_ENV}
+
+
+dockerenv: &dockerenv
+    name: Define container and Docker names
+    command: |
+        # If not set, define DOCKER_TAG
+        if [ ! -n "${DOCKER_TAG:-}" ]; then
+            DOCKER_TAG=$(echo "${CIRCLE_SHA1}" | cut -c1-10)
+        fi
+        # If not set, define CONTAINER_NAME
+        if [ ! -n "${CONTAINER_NAME:-}" ]; then
+            CONTAINER_NAME="${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}"
+        fi
+        echo "Container name is ${CONTAINER_NAME}"
+        if [ ! -n "${DOCKERFILE_PATH:-}" ]; then
+            DOCKERFILE_PATH="Dockerfile";
+        fi
+        echo "Dockerfile will be looked for at ${DOCKERFILE_PATH}"
+        # If not set, define REPO_NAME
+        if [ ! -n "${REPO_NAME:-}" ]; then
+            LOCAL_REPO="${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}"
+            REPO_NAME=/tmp/src
+            echo "Repository name (REPO_NAME) is not defined, will build ${LOCAL_REPO} in ${REPO_NAME}"
+        else
+            echo "Repository name found defined for build: ${REPO_NAME}"
+        fi
+        # export to bash environment
+        echo "export CONTAINER_NAME=${CONTAINER_NAME}" >> ${BASH_ENV}
+        echo "export DOCKER_TAG=${DOCKER_TAG}" >> ${BASH_ENV}
+        echo "export REPO_NAME=${REPO_NAME}" >> ${BASH_ENV}
+        echo "export DOCKERFILE_PATH=${DOCKERFILE_PATH}" >> ${BASH_ENV}
+        cat ${BASH_ENV}
+
+
+dockerload: &dockerload
+    name: Load Docker container Image
+    no_output_timeout: 30m
+    command: | 
+      echo "Working directory is ${PWD}"
+      docker info
+      set +o pipefail
+      if [ -f /tmp/cache/container.tar.gz ]; then
+          apk update && apk add --no-cache pigz curl curl-dev
+          pigz -d --stdout /tmp/cache/container.tar.gz | docker load
+          docker images
+      fi
+
+
+dockersave: &dockersave
+    name: Docker Save
+    no_output_timeout: 40m
+    command: |
+        source ${BASH_ENV}
+        echo "Saving ${CONTAINER_NAME}:${DOCKER_TAG} to container.tar.gz"
+        mkdir -p /tmp/cache
+        docker save ${CONTAINER_NAME}:${DOCKER_TAG} \
+          | pigz -2 -p 3 > /tmp/cache/container.tar.gz
+
+
+dockerdeploy: &dockerdeploy
+    name: Deploy to Docker Hub
+    no_output_timeout: 40m
+    command: |
+        source ${BASH_ENV}
+        echo "Container name set to ${CONTAINER_NAME}:${DOCKER_TAG}"
+        if [[ -n "$DOCKER_PASS" ]]; then
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker push ${CONTAINER_NAME}:${DOCKER_TAG}
+            echo "Tagging latest image..."
+            docker tag ${CONTAINER_NAME}:${DOCKER_TAG} ${CONTAINER_NAME}:latest
+            docker push ${CONTAINER_NAME}:latest
+        fi
+
+expfactoryrobots: &expfactoryrobots
+    name: Run expfactory/expfactory-robots to test experiment package
+    no_output_timeout: 60m
+    command: |
+        source ${BASH_ENV}
+        cd /tmp/src/
+        ls
+        echo "1. Starting the expfactory/expfactory-robots container"
+        echo "docker run --name expfactory-robot -td --entrypoint bash expfactory/expfactory-robots"
+        docker run --name expfactory-robot -td --entrypoint bash expfactory/expfactory-robots
+        echo "2. Copying experiment into it!"
+        docker exec expfactory-robot mkdir -p /data/${CIRCLE_PROJECT_REPONAME}
+        echo "docker cp /tmp/src/. expfactory-robot:/data/${CIRCLE_PROJECT_REPONAME}"
+        docker cp /tmp/src/. expfactory-robot:/data/${CIRCLE_PROJECT_REPONAME}
+        echo "docker exec expfactory-robot ls /data"
+        docker exec expfactory-robot ls /data
+        echo "docker exec expfactory-robot ls /data/${CIRCLE_PROJECT_REPONAME}"
+        docker exec expfactory-robot ls /data/${CIRCLE_PROJECT_REPONAME}
+        echo "3. running tests."
+        echo "docker exec -it expfactory-robot xvfb-run -a python3  /code/start.py /data/${CIRCLE_PROJECT_REPONAME}"
+        docker exec -it expfactory-robot xvfb-run -a python3  /code/start.py /data/${CIRCLE_PROJECT_REPONAME} && retval="$?" || retval="1"
+        if [ "${retval}" -neq 0 ]; then
+            echo "Return value $retval is nonzero, check errors above."
+            exit $retval
+        else
+            echo "Return value $retval, good job!"
+        fi
+        docker stop expfactory-robot
+
+
+githubsetup: &githubsetup
+    name: Prepare Github account credentials
+    command: |
+        # Only proceed if we minimally have a Github email
+        if [[ -n "${GITHUB_EMAIL:-}" ]];
+            then
+                echo "Preparing Github account credentials"
+                git config --global user.email $GITHUB_EMAIL
+                # If username is defined, use it (otherwuse use circle project)
+                if [[ -n "${GITHUB_USER:-}" ]];
+                    then
+                    git config --global user.name $GITHUB_USER
+                else
+                    git config --global user.name $CIRCLE_PROJECT_USERNAME
+                fi
+        fi
+
+dockerbuild: &dockerbuild
+    name: Build Experiment Container using Expfactory Builder
+    no_output_timeout: 60m
+    command: |
+        source ${BASH_ENV}
+        echo "0. Building Docker Container with expfactory builder"
+        echo "1. Starting vanessa/expfactory-builder container"
+        echo "docker run -td --entrypoint bash vanessa/expfactory-builder"
+        docker run --name expfactory-builder -td --entrypoint bash vanessa/expfactory-builder
+        echo "2. Copying experiment folder into container at /data"
+        mkdir -p /tmp/build/${CIRCLE_PROJECT_REPONAME}
+        cp -R /tmp/src/* /tmp/build/${CIRCLE_PROJECT_REPONAME}
+        # This copies the experiment into the container, so it's named by the folder     
+        echo "docker cp /tmp/src expfactory-builder:/data/${CIRCLE_PROJECT_REPONAME}"
+        docker cp /tmp/src expfactory-builder:/data/${CIRCLE_PROJECT_REPONAME}
+        # Now we can build and it's as if the experiment folder is mounted at data
+        echo "3. Building experiment with Dockerfile"
+        echo "docker exec expfactory-builder /entrypoint.sh build /data/${CIRCLE_PROJECT_REPONAME}"
+        docker exec expfactory-builder /entrypoint.sh build /data/${CIRCLE_PROJECT_REPONAME}
+        echo "4. Copying finished Dockerfile back into build folder"
+        docker cp expfactory-builder:/data/Dockerfile /tmp/build/Dockerfile
+        docker cp expfactory-builder:/data/startscript.sh /tmp/build/startscript.sh
+        docker stop expfactory-builder
+        docker rm expfactory-builder
+        echo "5. Performing build of experiment container"
+        cd /tmp/build
+        ls
+        docker build -t "${CONTAINER_NAME}:${DOCKER_TAG}" .
+        docker ps
+        docker images
+
+################################################################################
+# Jobs
+################################################################################
+
+
+version: 2
+jobs:
+  setup:
+    <<: *defaults
+    steps:
+      - run: *dockerenv
+      - run: *install
+      - run: *githubsetup
+
+  build:
+    <<: *defaults
+    steps:
+      - run: *install
+      - restore_cache:
+          keys:
+            - docker-v1-{{ .Branch }}
+          paths:
+            - /tmp/cache/container.tar.gz
+      - checkout
+      - setup_remote_docker
+      - run: *dockerenv
+      - run: *expfactoryrobots
+      - run: *dockerbuild
+      - run: *dockersave
+      - save_cache:
+         key: docker-v1-{{ .Branch }}
+         paths:
+            - /tmp/cache/container.tar.gz
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - cache/container.tar.gz
+            - src
+
+  update_cache:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - save_cache:
+         key: docker-v1-{{ .Branch }}
+         paths:
+            - /tmp/cache/container.tar.gz
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - setup_remote_docker
+      - run: *dockerenv
+      - run: *dockerload
+      - run: *dockerdeploy
+
+  manifest:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - setup_remote_docker
+      - run: *dockerenv
+      - run: *dockerload
+      - run: *containerdiff
+      - run: *githubsetup
+      - run: *install
+      - run:
+          name: Generate Inspection Manifest
+          no_output_timeout: 40m
+          command: |
+            source ${BASH_ENV}
+            which container-diff-linux-amd64
+            if [[ -n "${GITHUB_EMAIL:-}" ]];
+                then
+                    echo "=== Deploying manifests to Github Pages ==="
+                    echo "Generating Container Manifest"
+                    echo "1. Checking out Github pages branch"
+                    ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+                    git clone "git@github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git" out
+                    cd out
+                    # either checkout github pages, or create orphan
+                    git checkout gh-pages || git checkout --orphan gh-pages
+                    # Save all previous tags, so we don't pull and re-generate
+                    mkdir -p ../out-old
+                    rm -rf config.json
+                    for ext in json tar.gz
+                        do
+                        if /bin/bash -c "ls *.${ext}" 1> /dev/null 2>&1; then
+                                /bin/bash -c "cp *.${ext} ../out-old/" 
+                        fi
+                    done                    
+                    git rm -rf .
+                    # ensure that github pages are ignored
+                    mkdir -p .circleci && cp -a ../.circleci/. .circleci/.
+                    # Copy back previous files
+                    for ext in json tar.gz
+                        do
+                           if /bin/bash -c "ls ../out-old/*.${ext}" 1> /dev/null 2>&1; then
+                               /bin/bash -c "cp ../out-old/*.${ext} ${PWD}"
+                        fi
+                    done
+                    cp .circleci/template.html template.html
+                    # replace container name in index.html
+                    envsubst < template.html > index.html
+                    echo "2. Generating manifest for latest..."
+                    docker inspect ${CONTAINER_NAME}:${DOCKER_TAG} > manifest-latest.json
+                    # We will keep a list of tags
+                    rm -rf tags.json && touch tags.json
+                    for tag in $(curl -L -s "https://registry.hub.docker.com/v2/repositories/${CONTAINER_NAME}/tags?page_size=1024" | jq --raw-output '."results"[]["name"]')
+                      do
+                          # Add the tag to the list
+                          # when manifest doesn't exist, generate it
+                          DOCKER_MANIFEST="manifest-${tag}.json"
+                          if [ ! -f "${DOCKER_MANIFEST}" ];
+                            then
+                              echo "Generating manifest for ${DOCKER_MANIFEST}";
+                              docker pull "${CONTAINER_NAME}:${tag}";
+                              docker inspect "${CONTAINER_NAME}:${tag}" > "${DOCKER_MANIFEST}";
+                              /tmp/bin/container-diff-linux-amd64 analyze "${CONTAINER_NAME}:${tag}" --type=pip --type=file --type=apt --type=history --json > "inspect-${tag}.json";
+                          fi
+                          echo "${tag}" >> tags.json
+                    done
+                    echo "3. Adding manifests..."
+                    # Copy the inspect to latest
+                    cp "inspect-${DOCKER_TAG}.json" inspect-latest.json
+                    # Write the tags json
+                    # printf '%s\n' "${tags[@]}" | jq -R . | jq -s . > tags.json;
+                    git add -A;
+                    git commit -m "Automated deployment to GitHub Pages ${CIRCLE_SHA1}" --allow-empty
+                    git push origin gh-pages
+            else
+                echo "GITHUB_EMAIL not set, skipping manifest deploy to Github pages"
+            fi
+
+
+################################################################################
+# Workflows
+################################################################################
+
+
+workflows:
+  version: 2
+  build_deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
+            tags:
+              only: /.*/
+
+      # Upload the container to Docker Hub
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /.*/
+
+      # Push the manifest back to Github pages
+      - manifest:
+          requires:
+            - build
+            - deploy
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /.*/
+
+      - update_cache:
+          requires:
+            - build
+            - deploy
+            - manifest
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /.*/
