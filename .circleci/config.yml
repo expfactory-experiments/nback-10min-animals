@@ -141,9 +141,9 @@ expfactoryrobots: &expfactoryrobots
         echo "docker exec expfactory-robot ls /data/${CIRCLE_PROJECT_REPONAME}"
         docker exec expfactory-robot ls /data/${CIRCLE_PROJECT_REPONAME}
         echo "3. running tests."
-        echo "docker exec -it expfactory-robot xvfb-run -a python3  /code/start.py /data/${CIRCLE_PROJECT_REPONAME}"
-        docker exec -it expfactory-robot xvfb-run -a python3  /code/start.py /data/${CIRCLE_PROJECT_REPONAME} && retval="$?" || retval="1"
-        if [ "${retval}" -neq 0 ]; then
+        echo "docker exec -it expfactory-robot xvfb-run -a python3 /code/start.py /data/${CIRCLE_PROJECT_REPONAME}"
+        docker exec -it expfactory-robot "xvfb-run -a python3 /code/start.py /data/${CIRCLE_PROJECT_REPONAME}" && retval=$? || retval=1
+        if [ "${retval}" != 0 ]; then
             echo "Return value $retval is nonzero, check errors above."
             exit $retval
         else
