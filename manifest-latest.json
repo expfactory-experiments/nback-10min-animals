@@ -1,0 +1,134 @@
+[
+    {
+        "Id": "sha256:5d4a0c5cc7735dcbf8ca3d31e18680ccd55fd8a8d817b0a6e9e2adb6ee0c7f8d",
+        "RepoTags": [
+            "expfactory/nback-10min-animals:4afe71a489"
+        ],
+        "RepoDigests": [],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2018-09-06T02:41:03.330266859Z",
+        "Container": "ae9c6ee885db94a05e729896eb5a1c1bb97eacce6398e5269a778556383ea48b",
+        "ContainerConfig": {
+            "Hostname": "ae9c6ee885db",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5000/tcp": {},
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive",
+                "EXPFACTORY_STUDY_ID=expfactory",
+                "EXPFACTORY_SERVER=localhost",
+                "EXPFACTORY_CONTAINER=true",
+                "EXPFACTORY_DATA=/scif/data",
+                "EXPFACTORY_DATABASE=filesystem",
+                "EXPFACTORY_HEADLESS=false",
+                "EXPFACTORY_BASE=/scif/apps"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "EXPOSE 80/tcp"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:b741836f2f7ee4dd708c56456cafa0825ab5f5c713c5362c13c2a896ec8f4f09",
+            "Volumes": null,
+            "WorkingDir": "/scif/apps",
+            "Entrypoint": [
+                "/bin/bash",
+                "/startscript.sh"
+            ],
+            "OnBuild": [],
+            "Labels": {
+                "EXPERIMENT_nback-10min-animals": "/scif/apps/nback-10min-animals"
+            }
+        },
+        "DockerVersion": "17.09.0-ce",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5000/tcp": {},
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive",
+                "EXPFACTORY_STUDY_ID=expfactory",
+                "EXPFACTORY_SERVER=localhost",
+                "EXPFACTORY_CONTAINER=true",
+                "EXPFACTORY_DATA=/scif/data",
+                "EXPFACTORY_DATABASE=filesystem",
+                "EXPFACTORY_HEADLESS=false",
+                "EXPFACTORY_BASE=/scif/apps"
+            ],
+            "Cmd": null,
+            "ArgsEscaped": true,
+            "Image": "sha256:b741836f2f7ee4dd708c56456cafa0825ab5f5c713c5362c13c2a896ec8f4f09",
+            "Volumes": null,
+            "WorkingDir": "/scif/apps",
+            "Entrypoint": [
+                "/bin/bash",
+                "/startscript.sh"
+            ],
+            "OnBuild": [],
+            "Labels": {
+                "EXPERIMENT_nback-10min-animals": "/scif/apps/nback-10min-animals"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 658548910,
+        "VirtualSize": 658548910,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "aufs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:644879075e24394efef8a7dddefbc133aad42002df6223cacf98bd1e3d5ddde2",
+                "sha256:d7ff1dc646ba52a02312b535446d6c9b72cd09fda0480524e4828554efb2f748",
+                "sha256:686245e78935e73b737c9a82111c3c7df35f5529d06ce8c2f9a7cd32ec90b456",
+                "sha256:d73dd9e652956dccbbef716de4b172cc15fff644cc92fc69d221cc3a1cb89a39",
+                "sha256:2de391e51d731ba02b708038a7f98b7103061b916727bcd165e9ee6402f4cdde",
+                "sha256:3fba85f2748aa131a84f7452566ed4e14a06b416767f1c385beb4433d8ac0e03",
+                "sha256:1268c8b6ddd768a34ad52aa8e57fee05bab99bf6b2697954f07b524e792931b6",
+                "sha256:d4bfb71149041b16c5b772d4b05eeffd2d7337972b5490d5180205747427a090",
+                "sha256:f94e8b84928427236fe76e5658245e11611215b4f9986d2547c8227e91feda51",
+                "sha256:74c0756912ec1daf2e9098084049a74aa0f4c065c1c5b17285a0154782271bbd",
+                "sha256:f5a6582213dabf2bc8c551400cdb2f67dbebd04b840862ee06a008d6e6a9cd3b",
+                "sha256:6161149e45ff53ee0ab4f14a0f1f717441e7fc2c88dc301d0960b36d7ddb2125",
+                "sha256:a777c5083e595b2c9d89149725bce6817bd465fce87f3d4c82b140f6d125539c",
+                "sha256:36f1cfa4d591c6f443c9af2ed35f455cc3f5721c675677d5c8460d5fc01bbf18",
+                "sha256:ce6c4130284ca9bdc954bfda0f8cc5ec1b847ad0932179f4842e8be3d243e1b9",
+                "sha256:28f821d834aced7cfd7c63baa4e5c4fe35f517e2b685f4529a6b7fd8face4357",
+                "sha256:0954385821d0946d461cff06e4ae7399b7f5bbde589a0b4139cf77abc341bb86",
+                "sha256:953f9380d851d21e687e0824072d1ea999b3efdecaae681dc74105806ddc3c77",
+                "sha256:b75d27a164f36ba026ea4a5a0caea62da8ccedd1b7599a71fd860c4c8de68cd1",
+                "sha256:87f127b1df229a60aefedc0b2b8abd6c9f771c25d99003a0564e7132a6201d4e"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
