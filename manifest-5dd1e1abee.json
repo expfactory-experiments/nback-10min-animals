@@ -1,16 +1,18 @@
 [
     {
-        "Id": "sha256:ddd8456bc1699f5f58872df1b9126015597f69fa56a5e5ad64445e564554b8ad",
+        "Id": "sha256:ffa49f7ee2253faf182ff4d9597842547c3bd7193744d74d4e6889c64b4c6b5f",
         "RepoTags": [
-            "expfactory/nback-10min-animals:0ffb42f1b5"
+            "expfactory/nback-10min-animals:5dd1e1abee"
         ],
-        "RepoDigests": [],
+        "RepoDigests": [
+            "expfactory/nback-10min-animals@sha256:eee985c760b8176eb569518ae5af17ae3a68ccd3b85693fc1373aa51f6e5300a"
+        ],
         "Parent": "",
         "Comment": "",
-        "Created": "2018-09-06T13:23:26.819779329Z",
-        "Container": "24b7092c9959330ae4225c0d58872bd30ed6af4d93ec35e4bd93b8779b3b99dc",
+        "Created": "2018-09-06T13:22:36.165368837Z",
+        "Container": "912fb8dd4d00b09099733d6acbccf9b612cfc4f65c484704f8f6fce2fe49a763",
         "ContainerConfig": {
-            "Hostname": "24b7092c9959",
+            "Hostname": "912fb8dd4d00",
             "Domainname": "",
             "User": "",
             "AttachStdin": false,
@@ -41,7 +43,7 @@
                 "EXPOSE 80/tcp"
             ],
             "ArgsEscaped": true,
-            "Image": "sha256:1fdccfde7af2702072a104c6b7ee7c0b00f68a34771b06aa392b2573d4f9e4e9",
+            "Image": "sha256:fe5cf98e620791a893c4d4278c07b1f8f79592bc8554168bc889de8d84d108b0",
             "Volumes": null,
             "WorkingDir": "/scif/apps",
             "Entrypoint": [
@@ -82,7 +84,7 @@
             ],
             "Cmd": null,
             "ArgsEscaped": true,
-            "Image": "sha256:1fdccfde7af2702072a104c6b7ee7c0b00f68a34771b06aa392b2573d4f9e4e9",
+            "Image": "sha256:fe5cf98e620791a893c4d4278c07b1f8f79592bc8554168bc889de8d84d108b0",
             "Volumes": null,
             "WorkingDir": "/scif/apps",
             "Entrypoint": [
@@ -96,8 +98,8 @@
         },
         "Architecture": "amd64",
         "Os": "linux",
-        "Size": 658548312,
-        "VirtualSize": 658548312,
+        "Size": 658548274,
+        "VirtualSize": 658548274,
         "GraphDriver": {
             "Data": null,
             "Name": "aufs"
@@ -111,20 +113,20 @@
                 "sha256:d73dd9e652956dccbbef716de4b172cc15fff644cc92fc69d221cc3a1cb89a39",
                 "sha256:2de391e51d731ba02b708038a7f98b7103061b916727bcd165e9ee6402f4cdde",
                 "sha256:3fba85f2748aa131a84f7452566ed4e14a06b416767f1c385beb4433d8ac0e03",
-                "sha256:b8b446c07ee7fa81252fc888cc0a8174007a4566e2da3710a6ac4c439b77a86b",
-                "sha256:fb2573de73a205c3b6b727f7591d58f7d114b287e6e953a4c59c704a4ef5974f",
-                "sha256:af23d5a39502568febf4a870fc000abd5164b239f14631e6081c95d14fd4a700",
-                "sha256:3327a10c15af1ce12550f562e12d3cf6e586cd545448b7feee235a9afc50346a",
-                "sha256:f900567e7c321c0ce32b70f878857bc6811dfeca1baa6235bf7a70fbfda45993",
-                "sha256:f393748378cf1d4a0cafd40fa6c4a4d070aef0337ed2eb266e9e396c48e174fe",
-                "sha256:b9b95f5a80c97dc5a80be623aad759331eab4a6fa2455c906cb874c19b0d9b09",
-                "sha256:5df7657cee4e9f5b9e4996cfcbc68afebe631b64332e8b06436934953ce8199b",
-                "sha256:211e866fc1b1b9a35998a2f7a848f177fbbf2f203fadfce2354a689a23850ac5",
-                "sha256:de8d7a98cc661f2f2d9aa2e4ebc79dab5479ee67faaddc216401109a37f7f697",
-                "sha256:65fc965035878ff6d002fa6eb59e9389fd0a14a2eeac36109ed0adef82d731e8",
-                "sha256:dc733b4e23b3b9d6cd65736f9f329c745ff131f842566e1226dc228e5c44ae8d",
-                "sha256:f1867a39d50a658db28ee151a48d098d459e150d613d8c5af9100b51e6d04912",
-                "sha256:e0f59f61bf7e6fad9d89e2ab19a6bb82df4ff9806dae7e501ff0cfddccc10531"
+                "sha256:d54b96bf253af8712ba8ad2e141b3469c847b18a6c8385ee7618de0122b97b51",
+                "sha256:ceb9ebb8b7e8b39bdc8a01feee51b2f3290de44d4dfdac39d40a10571a5d01c6",
+                "sha256:5dd44b4f18089b0227553012f80b707386742eb6556ca9b3feecd640618dd42c",
+                "sha256:10298b2f2b9a996f5f70b63e377f34dea83b1dc99f2455d8745c86c9fdb5f455",
+                "sha256:8fe71bcd90da5719f1defe74266a399a541cd423e26a2cbf4377519a91d1e8bd",
+                "sha256:e65654e838d2d9788af6d5fb05d4a7689c4a5c245856cd5e991614e269781a8a",
+                "sha256:94d15a4d2ac5de6505e055a11797ef86cfde370960af4fb6d10b5a1973d51ecc",
+                "sha256:96e978a5e1e5c5058984dd2c86e9b9aa704128468d86262e0cfdaaf39ea5da3a",
+                "sha256:08fbf05324bfba2fb8b8de8ac8945603e3c7a2bf9985420915e197bf546c04ca",
+                "sha256:504b0d99b52926c02477c6fa83af7d5d98f265c3711bb2f176305c9e4dcc8f0e",
+                "sha256:e955adab7063bb3d047153d3b41bc275cfce6a70c21e749e212b9ac543fdcffa",
+                "sha256:0267fa599550d56b394c8baf69fbd9f7b50f6d022e9367d9c2fa96471af02838",
+                "sha256:c55fa06788cead228f6ff1a2e162365befa3750136e0c8aa0236125a2fe5e638",
+                "sha256:8a8814eef03ba6d8d2f41d60f23d3846546bfc12d47b1e5074cd9b890f5bf102"
             ]
         },
         "Metadata": {
