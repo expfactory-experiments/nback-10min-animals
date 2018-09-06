@@ -4,7 +4,9 @@
         "RepoTags": [
             "expfactory/nback-10min-animals:d5b2a9625a"
         ],
-        "RepoDigests": [],
+        "RepoDigests": [
+            "expfactory/nback-10min-animals@sha256:77b0ca3cdc3b4064eb7c8a26285c106e565ab00fed3cb4e5b7d29903f593f434"
+        ],
         "Parent": "",
         "Comment": "",
         "Created": "2018-09-06T06:12:27.043330666Z",
